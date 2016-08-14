@@ -21,9 +21,8 @@ no way to share settings between users or system jobs setting them individually.
 A prototype implementation can be found at
 https://github.com/jcsilkey/microbrew/tree/feature/homebrew-config-file.
 
-1. Upon execution, `brew` would search /etc/homebrew/homebrew.json and 
-$HOMEBREW_PREFIX/etc/homebrew/homebrew.json for a configuration file and load the
-first file found.
+1. Upon execution, `brew` would search $HOMEBREW_PREFIX/etc/homebrew/homebrew.json
+for a configuration file and load it if it exists.
 2. `brew` would then search for $HOME/.homebrew/homebrew.json and load it if found.
 3. Any options previously set via environmental variables are ignored, allowing users
 to continue setting options via the current process.
